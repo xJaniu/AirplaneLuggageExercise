@@ -1,0 +1,37 @@
+[
+  {
+    "flightId": 0,
+    "flightNumber": 9623,
+    "departureAirportIATACode": "SEA",
+    "arrivalAirportIATACode": "GDN",
+    "departureDate": "2018-06-06T04:59:55-02:00"
+  },
+  {
+    "flightId": 1,
+    "flightNumber": 8160,
+    "departureAirportIATACode": "YYT",
+    "arrivalAirportIATACode": "KRK",
+    "departureDate": "2014-01-23T10:26:45-01:00"
+  },
+  {
+    "flightId": 2,
+    "flightNumber": 4290,
+    "departureAirportIATACode": "ANC",
+    "arrivalAirportIATACode": "GDN",
+    "departureDate": "2017-08-16T12:02:10-02:00"
+  },
+  {
+    "flightId": 3,
+    "flightNumber": 5618,
+    "departureAirportIATACode": "ANC",
+    "arrivalAirportIATACode": "KRK",
+    "departureDate": "2018-07-30T11:12:26-02:00"
+  },
+  {
+    "flightId": 4,
+    "flightNumber": 1238,
+    "departureAirportIATACode": "YYT",
+    "arrivalAirportIATACode": "GDN",
+    "departureDate": "2015-07-23T03:14:55-02:00"
+  }
+]

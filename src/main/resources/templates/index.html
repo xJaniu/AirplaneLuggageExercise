@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Flights list</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container my-1">
+
+    <h1 align="center">Flights list</h1>
+
+    <a th:href = "@{/showLuggage}" class="btn btn-primary btn-sm mb-5"> Show luggage! </a>
+    <a th:href = "@{/uploadData}" class="btn btn-primary btn-sm mb-5"> Upload Data! </a>
+    <a th:href = "@{/deleteAllFlights}" class="btn btn-primary btn-sm mb-5"> Delete All Flights! </a>
+    <a th:href = "@{/deleteAllLuggage}" class="btn btn-primary btn-sm mb-5"> Delete All Luggage! </a>
+
+
+    <table class="table table-striped table-responsive-md">
+        <thead>
+
+        <tr>
+            <th>Flight ID</th>
+            <th>Flight number</th>
+            <th>Departure Airport IATA Code</th>
+            <th>Arrival Airport IATA Code</th>
+            <th>Departure Date</th>
+        </tr>
+
+        </thead>
+
+        <tbody>
+        <tr th:each="flight : ${allFlights}">
+            <td th:text="${flight.flightId}"></td>
+            <td th:text="${flight.flightNumber}"></td>
+            <td th:text="${flight.departureAirportIATACode}"></td>
+            <td th:text="${flight.arrivalAirportIATACode}"></td>
+            <td th:text="${flight.departureDate}"></td>
+            <td>
+<!--                <a th:href = "@{/editBook/{id}(id=${book.id})}" class="btn btn-primary btn-sm mb-3"> Update! </a>-->
+<!--                <a th:href = "@{/deleteBook/{id}(id=${book.id})}" class="btn btn-danger btn-sm mb-3"> Delete! </a>-->
+            </td>
+        </tr>
+
+
+        </tbody>
+
+
+
+
+    </table>
+</div>
+</body>
+</html>

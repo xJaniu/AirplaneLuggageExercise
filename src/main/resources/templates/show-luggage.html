@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Flights list</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container my-1">
+
+    <h1 align="center">Luggage list</h1>
+    <a th:href = "@{/}" class="btn btn-primary btn-sm mb-5"> Show flights! </a>
+
+    <!--    <a th:href = "@{/addBook}" class="btn btn-primary btn-sm mb-5"> Add Book! </a>-->
+    <!--    <a th:href = "@{/uploadData}" class="btn btn-primary btn-sm mb-5"> Upload Data! </a>-->
+    <a th:href = "@{/deleteAllFlights}" class="btn btn-primary btn-sm mb-5"> Delete All Flights! </a>
+    <a th:href = "@{/deleteAllLuggage}" class="btn btn-primary btn-sm mb-5"> Delete All Luggage! </a>
+
+
+    <table class="table table-striped table-responsive-md">
+        <thead>
+
+        <tr>
+            <th>Flight ID</th>
+            <th>Luggage type</th>
+            <th>Id</th>
+            <th>Weight</th>
+            <th>Weight Unit</th>
+            <th>Pieces</th>
+        </tr>
+
+        </thead>
+
+        <tbody>
+        <tr th:each="luggage : ${allLuggage}">
+            <td th:text="${luggage.flightId}"></td>
+            <td th:text="${luggage.luggageType}"></td>
+            <td th:text="${luggage.id}"></td>
+            <td th:text="${luggage.weight}"></td>
+            <td th:text="${luggage.weightUnit}"></td>
+            <td th:text="${luggage.pieces}"></td>
+            <td>
+                <!--                <a th:href = "@{/editBook/{id}(id=${book.id})}" class="btn btn-primary btn-sm mb-3"> Update! </a>-->
+                <!--                <a th:href = "@{/deleteBook/{id}(id=${book.id})}" class="btn btn-danger btn-sm mb-3"> Delete! </a>-->
+            </td>
+        </tr>
+
+
+        </tbody>
+
+
+
+
+    </table>
+</div>
+</body>
+</html>
